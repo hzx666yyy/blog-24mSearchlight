@@ -1,17 +1,28 @@
-import { defineConfig } from 'vitepress'
+// 1. 导入 defineConfigWithTheme 函数
+import { defineConfigWithTheme } from 'vitepress'
+// 2. 导入需要继承的配置对象
+import escookConfig from '@escook/vitepress-theme/config'
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default defineConfigWithTheme({
   base: "/blog-24mSearchlight/",
   ignoreDeadLinks: true, // 忽略所有死链
   head: [['link', { rel: 'icon', href: '/12.ico' }]],
   lang: 'en-US',
+  extends: escookConfig,
   title: "blog-24mSearchlight",
   description: "个人学习记录",
   themeConfig: {
     logo: '/12.ico',
     outlineTitle: '目录',
     outline: [2, 6],
+    musicBall: {
+      list:[
+        { name: "リテラチュア", src: "https://24msearchlight.oss-cn-beijing.aliyuncs.com/music/%E3%80%8C%E3%83%AA%E3%83%86%E3%83%A9%E3%83%81%E3%83%A5%E3%82%A2%E3%80%8D%E9%AD%94%E5%A5%B3%E4%B9%8B%E6%97%85op%EF%BC%88%E7%BF%BB%E8%87%AA%20%E4%B8%8A%E7%94%B0%E9%BA%97%E5%A5%88%EF%BC%89%20-%20Tsubaki%E6%A4%BF.flac" },
+        { name: "呼唤落花之名", src: "https://24msearchlight.oss-cn-beijing.aliyuncs.com/music/%E5%91%BC%E5%94%A4%E8%90%BD%E8%8A%B1%E4%B9%8B%E5%90%8D%20-%20MoreanP.mp3" },
+        { name: "PRAGMATISM -RESURRECTION- - Laur", src: "https://24msearchlight.oss-cn-beijing.aliyuncs.com/music/PRAGMATISM%20-RESURRECTION-%20-%20Laur.flac" },
+      ]
+    },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
