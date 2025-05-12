@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: "/blog-24mSearchlight/",
   ignoreDeadLinks: true, // 忽略所有死链
   head: [['link', { rel: 'icon', href: '/12.ico' }]],
   lang: 'en-US',
