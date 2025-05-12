@@ -48,3 +48,4 @@ function updateHomePageStyle(value: boolean) {
         homePageStyle = undefined
     }
 }
+
