@@ -14,15 +14,12 @@ hero:
       link: /README
 
 features:
-  - title: JUC
-    details: 学习中
-    link: https://www.bilibili.com/video/BV16J411h7Rd/
-  - title: Zookeeper
-    details: 学习中
-    link: https://www.bilibili.com/video/BV1to4y1C7gw/
-  - title: RocketMQ
-    details: 学习中
-    link: https://www.bilibili.com/video/BV1cf4y157sz/
+  - title: 1
+    details: 1
+  - title: 2
+    details: 2
+  - title: 3
+    details: 3
   
 ---
 
