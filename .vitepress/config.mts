@@ -7,7 +7,7 @@ import escookConfig from '@escook/vitepress-theme/config'
 export default defineConfigWithTheme({
   base: "/blog-24mSearchlight/",
   ignoreDeadLinks: true, // 忽略所有死链
-  head: [['link', { rel: 'icon', href: '/12.ico' }]],
+  head: [['link', { rel: 'icon', href: '/blog-24mSearchlight/12.ico' }]],
   lang: 'en-US',
   extends: escookConfig,
   title: "blog-24mSearchlight",
