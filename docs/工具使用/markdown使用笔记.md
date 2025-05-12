@@ -13,8 +13,19 @@
 2 ## 这是二级标题
 ```
 
-效果:
+> 更新时间：2024年
 
+::: danger
+This is a dangerous warning.
+:::
+
+
+效果:
+B站链接图标：[哔哩哔哩](https://www.bilibili.com/)
+<sapn class="marker-text">这里是重重点</sapn>
+<sapn class="marker-text-highlight">这里是荧光笔</sapn>
+<sapn class="marker-evy">这里是尤雨溪的主页样式，鼠标放在我上面看效果</sapn>
+<Linkcard url="https://vitepress.yiov.top/" title="Vitepress中文搭建教程" description="https://vitepress.yiov.top/" logo="https://vitepress.yiov.top/logo.png"/>
 # 这是一级标题
 
 ## 	<font color="yellow">这是二级标题</font>

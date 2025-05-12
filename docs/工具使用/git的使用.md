@@ -11,8 +11,8 @@ yum -y install git
 ### 1. 配置用户名字和邮箱
 
 ```bash
-git config --global user.name ""
-git config --global user.email ""
+git configs --global user.name ""
+git configs --global user.email ""
 ```
 
 ### 2. 添加ssh密钥

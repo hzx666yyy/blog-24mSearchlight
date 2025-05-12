@@ -24,7 +24,7 @@ dnf remove docker \
 ```shell
 dnf -y install dnf-plugins-core
 //设置阿里仓库
-dnf config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+dnf configs-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 ```
 
 ### 3. 安装
@@ -104,13 +104,13 @@ sudo yum install -y yum-utils device-mapper-persistent-data lvm2
 ### 3.设置docker的yum源
 
 ```bash
-sudo yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+sudo yum-configs-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 ```
 
 国内的阿里云的源, 服务器是海外可以不设置
 
 ```bash
-sudo yum-config-manager \
+sudo yum-configs-manager \
     --add-repo \
     https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 sudo sed -i 's/download.docker.com/mirrors.aliyun.com\/docker-ce/g' /etc/yum.repos.d/docker-ce.repo

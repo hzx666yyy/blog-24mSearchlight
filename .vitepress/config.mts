@@ -1,16 +1,13 @@
-// 1. 导入 defineConfigWithTheme 函数
-import { defineConfigWithTheme } from 'vitepress'
-// 2. 导入需要继承的配置对象
-import escookConfig from '@escook/vitepress-theme/config'
 
+import { defineConfig } from 'vitepress'
+import { nav } from './theme/configs'
 
 // https://vitepress.dev/reference/site-config
-export default defineConfigWithTheme({
+export default defineConfig({
   base: "/blog-24mSearchlight/",
   ignoreDeadLinks: true, // 忽略所有死链
   head: [['link', { rel: 'icon', href: '/blog-24mSearchlight/12.ico' }]],
   lang: 'en-US',
-  extends: escookConfig,
   title: "blog-24mSearchlight",
   description: "个人学习记录",
   themeConfig: {
@@ -38,12 +35,14 @@ export default defineConfigWithTheme({
         timeStyle: 'short'
       }
     },
-    // https://vitepress.dev/reference/default-theme-config
+    nav,
+    /*// https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
+      { text: 'Blogs', link: '/' },
       { text: 'Tags', link: '/docs/Tags' },
+      { text: '待定', link: '' },
 
-    ],
+    ],*/
 
     sidebar: [
       { text: 'Linux',items:[

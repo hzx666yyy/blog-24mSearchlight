@@ -1,21 +1,50 @@
-import { h } from 'vue'
-import type { Theme } from 'vitepress'
-// 1. 导入彬哥的主题
-import escookTheme from '@escook/vitepress-theme'
-// 2. 导入配套的 CSS 样式（此步骤不能省略）
-import '@escook/vitepress-theme/style.css'
-// 导入您的自定义的样式
-import './style.css'
+import DefaultTheme from 'vitepress/theme'
+import './style/index.css'
+import {watch} from "vue";
+// 彩虹背景动画样式
+let homePageStyle: HTMLStyleElement | undefined
+
+import Mycomponent from "./components/Mycomponent.vue"
+import Linkcard from "./components/Linkcard.vue"
+import HomeUnderline from "./components/HomeUnderline.vue"
+import MyLayout from "./components/MyLayout.vue";
+import backtotop from "./components/backtotop.vue"
 
 export default {
-    // 3. 指定要继承的主题，并基于此主题进行二次扩展
-    extends: escookTheme,
-    Layout: () => {
-        return h(escookTheme.Layout, null, {
-            // https://vitepress.dev/guide/extending-default-theme#layout-slots
-        })
+    extends: DefaultTheme,
+    Layout: MyLayout,
+    enhanceApp({app , router }) {
+        // 注册全局组件
+        app.component('Mycomponent' , Mycomponent)
+        app.component('Linkcard' , Linkcard)
+        app.component('HomeUnderline' , HomeUnderline)
+        // 彩虹背景动画样式
+        if (typeof window !== 'undefined') {
+            watch(
+                () => router.route.data.relativePath,
+                () => updateHomePageStyle(location.pathname === '/'),
+                { immediate: true },
+            )
+        }
+
     },
-    enhanceApp({ app, router, siteData }) {
-        // 扩展自定义的功能...
+}
+
+// 彩虹背景动画样式
+function updateHomePageStyle(value: boolean) {
+    if (value) {
+        if (homePageStyle) return
+
+        homePageStyle = document.createElement('style')
+        homePageStyle.innerHTML = `
+    :root {
+      animation: rainbow 12s linear infinite;
+    }`
+        document.body.appendChild(homePageStyle)
+    } else {
+        if (!homePageStyle) return
+
+        homePageStyle.remove()
+        homePageStyle = undefined
     }
-} satisfies Theme
+}
