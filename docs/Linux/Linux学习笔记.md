@@ -2,11 +2,7 @@
 
 >#### **@author 24m探照灯**
 
----
 
-[**韩顺平老师的详细笔记**](documents\韩顺平_2021图解Linux全面升级.pdf)^ctrl+光标点击^
-
----
 
 [toc]
 
@@ -829,8 +825,6 @@ chgrp newgroup 文件/目录			改变所有组
 - 基本语法: `usermod -g 用户组 用户名`
 
 ---
-
->Linux找回root密码:  [**详见**](documents\韩顺平教育--linux找回root密码.docx)^ctrl+光标点击^
 
 ### 1. 用户和组相关文件
 
