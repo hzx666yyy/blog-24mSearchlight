@@ -51,6 +51,12 @@ jobs:
 #        鼠标粒子效果依赖安装
       - name: Install animejs@3.2.2
         run: npm i -D animejs@3.2.2 @types/animejs
+#        安装不蒜子 (网站访问量)
+      - name: Install busuanzi
+        run: npm install busuanzi.pure.js
+#        评论区
+      - name: Install vitepress-plugin-comment-with-giscus
+        run: npm install vitepress-plugin-comment-with-giscus
       - name: Build with VitePress
         run: npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
       - name: Upload artifact

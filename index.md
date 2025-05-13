@@ -22,5 +22,6 @@ features:
     details: 3
   
 ---
+<DataPanel />
 <HomeUnderline />
 <MyLayout />

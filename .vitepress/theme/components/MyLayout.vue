@@ -5,6 +5,7 @@ import { nextTick, provide } from 'vue'
 import MouseClick from "./MouseClick.vue";
 import MouseFollower from "./MouseFollower.vue";
 import backtotop from "./backtotop.vue"
+import notice from "./notice.vue"
 
 const { Layout } = DefaultTheme
 
@@ -49,6 +50,8 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
     <template #layout-top>
       <MouseFollower />
       <MouseClick />
+<!--      公告-->
+<!--      <notice />-->
     </template>
     <template #doc-footer-before>
       <backtotop />

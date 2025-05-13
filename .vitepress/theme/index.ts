@@ -4,20 +4,56 @@ import {watch} from "vue";
 // 彩虹背景动画样式
 let homePageStyle: HTMLStyleElement | undefined
 
+import { inBrowser } from 'vitepress'
+import busuanzi from 'busuanzi.pure.js'
+
+import giscusTalk from 'vitepress-plugin-comment-with-giscus';
+import { useData, useRoute } from 'vitepress';
+
 import Mycomponent from "./components/Mycomponent.vue"
 import Linkcard from "./components/Linkcard.vue"
 import HomeUnderline from "./components/HomeUnderline.vue"
 import MyLayout from "./components/MyLayout.vue";
-import backtotop from "./components/backtotop.vue"
+import DataPanel from "./components/DataPanel.vue"
 
 export default {
     extends: DefaultTheme,
+    setup() {
+        // Get frontmatter and route
+        const { frontmatter } = useData();
+        const route = useRoute();
+
+        // giscus配置
+        giscusTalk({
+                repo: "hzx666yyy/blog-24mSearchlight", //仓库
+                repoId: 'R_kgDOOokvjg', //仓库ID
+                category: 'General', // 讨论分类
+                categoryId: 'DIC_kwDOOokvjs4CqEvT', //讨论分类ID
+                mapping: 'pathname',
+                inputPosition: 'bottom',
+                lang: 'zh-CN',
+            },
+            {
+                frontmatter, route
+            },
+            //默认值为true，表示已启用，此参数可以忽略；
+            //如果为false，则表示未启用
+            //您可以使用“comment:true”序言在页面上单独启用它
+            true
+        );
+    },
     Layout: MyLayout,
     enhanceApp({app , router }) {
         // 注册全局组件
         app.component('Mycomponent' , Mycomponent)
         app.component('Linkcard' , Linkcard)
         app.component('HomeUnderline' , HomeUnderline)
+        app.component('DataPanel' , DataPanel)
+        if (inBrowser) {
+            router.onAfterRouteChanged = () => {
+                busuanzi.fetch()
+            }
+        }
         // 彩虹背景动画样式
         if (typeof window !== 'undefined') {
             watch(
@@ -37,9 +73,9 @@ function updateHomePageStyle(value: boolean) {
 
         homePageStyle = document.createElement('style')
         homePageStyle.innerHTML = `
-    :root {
-      animation: rainbow 12s linear infinite;
-    }`
+            :root {
+              animation: rainbow 12s linear infinite;
+            }`
         document.body.appendChild(homePageStyle)
     } else {
         if (!homePageStyle) return
