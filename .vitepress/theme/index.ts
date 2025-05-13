@@ -34,7 +34,7 @@ const playlist = [
         name: '呼唤落花之名',
         author: 'author2',
         file: 'https://24msearchlight.oss-cn-beijing.aliyuncs.com/music/%E5%91%BC%E5%94%A4%E8%90%BD%E8%8A%B1%E4%B9%8B%E5%90%8D%20-%20MoreanP.mp3',
-        hide: true
+
     },
     {
         name: 'Believing',
