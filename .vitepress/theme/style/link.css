@@ -16,7 +16,7 @@
 /* 哔哩哔哩 */
 .vp-doc a[href^="https://www.bilibili.com/"]:before {
     content: '';
-    background-image: url(/svg/bilibili.svg);
+    background-image: url(/blog-24mSearchlight/svg/bilibili.svg);
     width: 20px;
     height: 20px;
     display: inline-block;
