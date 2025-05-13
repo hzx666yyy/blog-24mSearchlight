@@ -2,14 +2,14 @@
 import { defineConfig } from 'vitepress'
 import { nav,sidebar } from './theme/configs'
 import timeline from "vitepress-markdown-timeline";
-
+import vue from '@vitejs/plugin-vue'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+
   base: "/blog-24mSearchlight/",
   ignoreDeadLinks: true, // 忽略所有死链
   head: [['link', { rel: 'icon', href: '/blog-24mSearchlight/12.ico' }],
     ['script', { src: '/blog-24mSearchlight/live2d.js' }],
-    ['script', { src: '/blog-24mSearchlight/busuanzi.pure.mini.js' }],
   ],
   lang: 'en-US',
   title: "blog-24mSearchlight",

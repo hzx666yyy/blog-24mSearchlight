@@ -10,12 +10,15 @@
     "vitepress-markdown-timeline": "^1.2.2",
     "vitepress-plugin-comment-with-giscus": "^1.1.15",
     "vue": "^3.5.13",
-    "vuepress-plugin-helper-live2d": "^1.0.2"
+    "vuepress-plugin-helper-live2d": "^1.0.2",
+    "waline": "^0.0.1"
   },
   "devDependencies": {
     "@types/animejs": "^3.1.13",
+    "@vitejs/plugin-vue": "^5.2.4",
     "@vuepress/plugin-back-to-top": "^2.0.0-rc.103",
     "animejs": "^3.2.2",
+    "vite-plugin-css": "^1.0.4",
     "vitepress": "^1.6.3",
     "vitepress-theme-website": "^1.0.8"
   },

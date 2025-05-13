@@ -26,25 +26,25 @@ export default {
     setup() {
 
         //看板娘 //
-        useLive2d({
-            enable: true,
-            model: {
-                url: 'https://raw.githubusercontent.com/iCharlesZ/vscode-live2d-models/master/model-library/potion-Maker-Pio/index.json'
-            },
-            display: {
-                position: 'left',
-                width: '135px',
-                height: '200px',
-                xOffset: '35px',
-                yOffset: '5px'
-            },
-            mobile: {
-                show: true
-            },
-            react: {
-                opacity: 0.8
-            }
-        })
+        // useLive2d({
+        //     enable: true,
+        //     model: {
+        //         url: 'https://raw.githubusercontent.com/iCharlesZ/vscode-live2d-models/master/model-library/potion-Maker-Pio/index.json'
+        //     },
+        //     display: {
+        //         position: 'left',
+        //         width: '135px',
+        //         height: '200px',
+        //         xOffset: '35px',
+        //         yOffset: '5px'
+        //     },
+        //     mobile: {
+        //         show: true
+        //     },
+        //     react: {
+        //         opacity: 0.8
+        //     }
+        // })
 
         // Get frontmatter and route
         const { frontmatter } = useData();
