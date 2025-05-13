@@ -7,6 +7,7 @@ import MouseFollower from "./MouseFollower.vue";
 import backtotop from "./backtotop.vue"
 import notice from "./notice.vue"
 
+
 const { Layout } = DefaultTheme
 
 const { isDark } = useData()

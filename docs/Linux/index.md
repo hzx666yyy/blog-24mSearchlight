@@ -2,7 +2,7 @@
 <br>
 <br>
 <br>
-<a href="./Linux/Linux学习笔记" class="a_style">Linux学习笔记</a>
+<a href="./Linux/Linux学习笔记" class="a_style">Linux学习笔记</a>  
 <br>
 <br>
 <a href="./Linux/yum的配置" class="a_style">yum的配置</a>

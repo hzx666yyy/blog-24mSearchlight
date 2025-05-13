@@ -1,17 +1,18 @@
 import DefaultTheme from 'vitepress/theme'
 import './style/index.css'
 import "vitepress-markdown-timeline/dist/theme/index.css";
-import {watch} from "vue";
 // 彩虹背景动画样式
 let homePageStyle: HTMLStyleElement | undefined
 
 import { useLive2d } from 'vitepress-theme-website'
 
-import { inBrowser } from 'vitepress'
+import { inBrowser,useRoute,useData } from 'vitepress'
 import busuanzi from 'busuanzi.pure.js'
 
 import giscusTalk from 'vitepress-plugin-comment-with-giscus';
-import { useData, useRoute } from 'vitepress';
+
+import mediumZoom from 'medium-zoom';
+import { onMounted, watch, nextTick } from 'vue';
 
 import Mycomponent from "./components/Mycomponent.vue"
 import Linkcard from "./components/Linkcard.vue"
@@ -68,6 +69,18 @@ export default {
             //您可以使用“comment:true”序言在页面上单独启用它
             true
         );
+        const initZoom = () => {
+            // mediumZoom('[data-zoomable]', { background: 'var(--vp-c-bg)' }); // 默认
+            mediumZoom('.main img', { background: 'var(--vp-c-bg)' }); // 不显式添加{data-zoomable}的情况下为所有图像启用此功能
+        };
+        onMounted(() => {
+            initZoom();
+        });
+        watch(
+            () => route.path,
+            () => nextTick(() => initZoom())
+        );
+
     },
     Layout: MyLayout,
     enhanceApp({app , router }) {
