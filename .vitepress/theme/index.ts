@@ -28,6 +28,7 @@ import ArticleMetadata from "./components/ArticleMetadata.vue"
 const playlist = [
     {
         name: '永恒呼吸',
+        author: '塞壬唱片MSR',
         file: 'https://24msearchlight.oss-cn-beijing.aliyuncs.com/music/%E6%B0%B8%E6%81%92%E5%91%BC%E5%90%B8%20-%20%E5%A1%9E%E5%A3%AC%E5%94%B1%E7%89%87-MSR%2CYU.flac',
     },
     {
@@ -127,7 +128,7 @@ export default {
         if (typeof window !== 'undefined') {
             watch(
                 () => router.route.data.relativePath,
-                () => updateHomePageStyle(location.pathname === '/'),
+                () => updateHomePageStyle(location.pathname === '/blog-24mSearchlight/'),
                 { immediate: true },
             )
         }
