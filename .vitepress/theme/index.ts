@@ -1,8 +1,11 @@
 import DefaultTheme from 'vitepress/theme'
 import './style/index.css'
+import "vitepress-markdown-timeline/dist/theme/index.css";
 import {watch} from "vue";
 // 彩虹背景动画样式
 let homePageStyle: HTMLStyleElement | undefined
+
+import { useLive2d } from 'vitepress-theme-website'
 
 import { inBrowser } from 'vitepress'
 import busuanzi from 'busuanzi.pure.js'
@@ -15,10 +18,34 @@ import Linkcard from "./components/Linkcard.vue"
 import HomeUnderline from "./components/HomeUnderline.vue"
 import MyLayout from "./components/MyLayout.vue";
 import DataPanel from "./components/DataPanel.vue"
+import update from "./components/update.vue"
+import ArticleMetadata from "./components/ArticleMetadata.vue"
 
 export default {
     extends: DefaultTheme,
     setup() {
+
+        //看板娘 //
+        useLive2d({
+            enable: true,
+            model: {
+                url: 'https://raw.githubusercontent.com/iCharlesZ/vscode-live2d-models/master/model-library/potion-Maker-Pio/index.json'
+            },
+            display: {
+                position: 'left',
+                width: '135px',
+                height: '200px',
+                xOffset: '35px',
+                yOffset: '5px'
+            },
+            mobile: {
+                show: true
+            },
+            react: {
+                opacity: 0.8
+            }
+        })
+
         // Get frontmatter and route
         const { frontmatter } = useData();
         const route = useRoute();
@@ -44,16 +71,15 @@ export default {
     },
     Layout: MyLayout,
     enhanceApp({app , router }) {
+
         // 注册全局组件
         app.component('Mycomponent' , Mycomponent)
         app.component('Linkcard' , Linkcard)
         app.component('HomeUnderline' , HomeUnderline)
         app.component('DataPanel' , DataPanel)
-        if (inBrowser) {
-            router.onAfterRouteChanged = () => {
-                busuanzi.fetch()
-            }
-        }
+        app.component('update' , update)
+        app.component('ArticleMetadata' , ArticleMetadata)
+
         // 彩虹背景动画样式
         if (typeof window !== 'undefined') {
             watch(
@@ -61,6 +87,11 @@ export default {
                 () => updateHomePageStyle(location.pathname === '/'),
                 { immediate: true },
             )
+        }
+        if (inBrowser) {
+            router.onAfterRouteChanged = () => {
+                busuanzi.fetch()
+            }
         }
 
     },

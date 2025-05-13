@@ -1,12 +1,16 @@
 
 import { defineConfig } from 'vitepress'
 import { nav,sidebar } from './theme/configs'
+import timeline from "vitepress-markdown-timeline";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: "/blog-24mSearchlight/",
   ignoreDeadLinks: true, // 忽略所有死链
-  head: [['link', { rel: 'icon', href: '/blog-24mSearchlight/12.ico' }]],
+  head: [['link', { rel: 'icon', href: '/blog-24mSearchlight/12.ico' }],
+    ['script', { src: '/blog-24mSearchlight/live2d.js' }],
+    ['script', { src: '/blog-24mSearchlight/busuanzi.pure.mini.js' }],
+  ],
   lang: 'en-US',
   title: "blog-24mSearchlight",
   description: "个人学习记录",
@@ -28,13 +32,7 @@ export default defineConfig({
         { name: "Last", src: "https://24msearchlight.oss-cn-beijing.aliyuncs.com/music/Last%20-%20onoken.flac" },
       ]
     },
-    lastUpdated: {
-      text: '最后更新于: ',
-      formatOptions: {
-        dateStyle: 'short',
-        timeStyle: 'short'
-      }
-    },
+    lastUpdated: true,
     nav,
     sidebar,
     socialLinks: [
@@ -69,6 +67,17 @@ export default defineConfig({
         },
       },
     },
-  },
+  },//markdown配置
+  markdown: {
+    // 组件插入h1标题下
+    config: (md) => {
+      md.use(timeline);
+      md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
+        let htmlResult = slf.renderToken(tokens, idx, options);
+        if (tokens[idx].tag === 'h1') htmlResult += `<ArticleMetadata />`;
+        return htmlResult;
+      }
+    }
+  }
 
 })

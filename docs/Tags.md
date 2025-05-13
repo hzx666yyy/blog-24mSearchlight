@@ -2,7 +2,6 @@
 lastUpdated: true
 ---
 # :tada: Tags
-
 <br>
 <div class="container">
 <div id="tags" class="item">

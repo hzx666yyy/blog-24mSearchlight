@@ -21,7 +21,7 @@ setTimeout(function(){ visible.value = false }, 5000);
     </div>
 
     <div class="bulletin-content">
-      <h3 class="bulletin-h3">本次更新：</h3>
+      <h3 class="bulletin-h3">测试：</h3>
       <p class="bulletin-p">公告样式，参考自 <a class="bulletin-link" href="https://theme-reco.vuejs.press/" target="_blank">VuePress-Reco</a></p>
       <p class="bulletin-p">QQ 频道：******(无效二维码)</p>
       <img class="bulletin-img" src="/hikari.jpg">
@@ -133,4 +133,5 @@ hr {
   line-height: 3.5rem;
   color: #ffffff;
 }
+
 </style>

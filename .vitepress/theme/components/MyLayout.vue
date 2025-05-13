@@ -51,7 +51,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
       <MouseFollower />
       <MouseClick />
 <!--      公告-->
-<!--      <notice />-->
+      <notice />
     </template>
     <template #doc-footer-before>
       <backtotop />
@@ -82,7 +82,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 }
 
 .VPSwitchAppearance {
-  width: 22px !important;
+  width: 40px !important;
 }
 
 .VPSwitchAppearance .check {

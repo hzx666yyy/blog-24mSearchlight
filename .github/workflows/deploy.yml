@@ -57,6 +57,9 @@ jobs:
 #        评论区
       - name: Install vitepress-plugin-comment-with-giscus
         run: npm install vitepress-plugin-comment-with-giscus
+#        看板娘插件
+      - name: Install vitepress-theme-website
+        run: npm install vitepress-theme-website
       - name: Build with VitePress
         run: npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
       - name: Upload artifact
