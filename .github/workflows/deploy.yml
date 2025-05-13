@@ -60,6 +60,9 @@ jobs:
 #        看板娘插件
       - name: Install vitepress-theme-website
         run: npm install vitepress-theme-website
+#        安装时间线插件
+      - name: Install vitepress-markdown-timeline
+        run: npm install vitepress-markdown-timeline
       - name: Build with VitePress
         run: npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
       - name: Upload artifact
