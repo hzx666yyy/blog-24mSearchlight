@@ -14,8 +14,9 @@ hero:
       link: /README
 
 features:
-  - title: 1
-    details: 1
+  - title: Markdown 扩展
+    details: VitePress 带有内置的 Markdown 扩展。
+    link: https://vitepress.dev/zh/guide/markdown
   - title: 2
     details: 2
   - title: 3
