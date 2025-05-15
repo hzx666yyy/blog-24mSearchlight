@@ -18,9 +18,11 @@ lastUpdated: true
 <div class="item">
 <button v-on:click="FunTest('工具')" style="font-size: 19px" class="hover-btn">工具</button>  
 </div>
-
 <div class="item">
 <button v-on:click="FunTest('CSharp')" style="font-size: 19px" class="hover-btn">C#</button>  
+</div>
+<div class="item">
+<button v-on:click="FunTest('Unity')" style="font-size: 19px" class="hover-btn">Unity</button>  
 </div>
 
 </div>
@@ -52,6 +54,10 @@ lastUpdated: true
 <!--@include: ./CSharp/index.md-->
 </template>
 
+<template v-if="isVisible && fileName=='Unity'">
+<!--@include: ./Unity/index.md-->
+</template>
+
 <script>
 export default {
   name:'tags' ,
@@ -63,16 +69,11 @@ export default {
   },
   methods:{
       FunTest(name){
-        console.log("FunTest");
-        console.log(this.fileName);
-
         this.isVisible = !this.isVisible;
         if(this.fileName != name){
             this.isVisible = true;
         }
         this.fileName = name ;
-        console.log(this.fileName);
-    
       }
   }
 }
