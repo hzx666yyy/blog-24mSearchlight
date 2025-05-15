@@ -1,7 +1,15 @@
 import type { DefaultTheme } from 'vitepress'
 
 export const sidebar: DefaultTheme.Config['sidebar'] = [
-    { text: 'Linux',items:[
+    {text: 'C#',
+        collapsed: false,
+        items:[
+            {text: 'C# 扩展方法',link: '/docs/CSharp/CSharp 扩展方法'}
+        ]
+    },
+    { text: 'Linux',
+        collapsed:false,
+        items:[
             {text: 'linux',items: [
                     { text: 'Linux学习笔记', link: '/docs/Linux/Linux学习笔记' },
                     { text: 'yum的配置', link: '/docs/Linux/yum的配置' },

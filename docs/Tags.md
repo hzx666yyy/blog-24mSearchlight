@@ -1,21 +1,28 @@
 ---
 lastUpdated: true
 ---
+
 # :tada: Tags
+
 <br>
 <div class="container">
-<div id="tags" class="item">
+<div class="item">
 <button v-on:click="FunTest('docker')" style="font-size: 19px" class="hover-btn">docker</button>  
 </div>
-<div id="tags" class="item">
+<div  class="item">
 <button v-on:click="FunTest('Linux')" style="font-size: 19px" class="hover-btn">Linux</button>  
 </div>
-<div id="tags" class="item">
+<div class="item">
 <button v-on:click="FunTest('计算机基础')" style="font-size: 19px" class="hover-btn">计算机基础</button>  
 </div>
-<div id="tags" class="item">
+<div class="item">
 <button v-on:click="FunTest('工具')" style="font-size: 19px" class="hover-btn">工具</button>  
 </div>
+
+<div class="item">
+<button v-on:click="FunTest('CSharp')" style="font-size: 19px" class="hover-btn">C#</button>  
+</div>
+
 </div>
 
 
@@ -39,6 +46,10 @@ lastUpdated: true
 
 <template v-if="isVisible && fileName=='工具'">
 <!--@include: ./工具使用/index.md-->
+</template>
+
+<template v-if="isVisible && fileName=='CSharp'">
+<!--@include: ./CSharp/index.md-->
 </template>
 
 <script>
