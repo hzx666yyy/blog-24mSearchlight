@@ -52,7 +52,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
       <MouseFollower />
       <MouseClick />
 <!--      公告-->
-      <notice />
+<!--      <notice />-->
     </template>
     <template #doc-footer-before>
       <backtotop />

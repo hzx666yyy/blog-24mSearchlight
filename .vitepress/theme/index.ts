@@ -1,6 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import './style/index.css'
 import "vitepress-markdown-timeline/dist/theme/index.css";
+
 // 彩虹背景动画样式
 let homePageStyle: HTMLStyleElement | undefined
 
@@ -25,7 +26,12 @@ import DataPanel from "./components/DataPanel.vue"
 import update from "./components/update.vue"
 import ArticleMetadata from "./components/ArticleMetadata.vue"
 
+
+
+
 import {playlist} from "./untils/musiclist";
+
+
 
 
 export default {

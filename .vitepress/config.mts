@@ -13,8 +13,8 @@ export default defineConfig({
     ['script', { src: '/blog-24mSearchlight/live2d.js' }],
   ],
   lang: 'en-US',
-  title: "blog-24mSearchlight",
-  description: "个人学习记录",
+  title: "24mSearchlight′s Blog",
+  description: "记录成长点滴",
   themeConfig: {
     returnToTopLabel: '返回顶部',
     // 返回顶部
@@ -36,7 +36,7 @@ export default defineConfig({
 
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2019-present Evan You'
+      copyright: 'Copyright © 2025-present Evan You'
     },
     //本地搜索
     search: {

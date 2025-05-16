@@ -3,27 +3,33 @@
 layout: home
 
 hero:
-  name: "blog-24mSearchlight"
-  text: "个人学习记录"
-  tagline: Ciallo～(∠・ω< )⌒☆
+  name: "24SLT′s Blog"
+  text: "记录成长点滴"
+  tagline: <Tagline />
   image: 
-    src: /表情.png
+    src: /blog.png
   actions:
     - theme: brand
       text: 开始阅读
       link: /README
+    - theme: alt
+      text: GitHub
+      link: 
 
 features:
-  - title: Markdown 扩展
+  - title: <font color="white">Markdown 扩展</font>
+    icon: 🚀
     details: VitePress 带有内置的 Markdown 扩展。
     link: https://vitepress.dev/zh/guide/markdown
   - title: 2
+    icon: 📚
     details: 2
   - title: 3
+    icon: 💯
     details: 3
   
 ---
-<DataPanel />
+
 <HomeUnderline />
 <MyLayout />
 
