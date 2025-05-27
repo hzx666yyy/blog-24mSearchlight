@@ -21,9 +21,10 @@ features:
     icon: 🚀
     details: VitePress 带有内置的 Markdown 扩展。
     link: https://vitepress.dev/zh/guide/markdown
-  - title: 2
+  - title: <font color="white">文章分类</font>
     icon: 📚
-    details: 2
+    details: 笔记文章
+    link: /Tags
   - title: 3
     icon: 💯
     details: 3
