@@ -24,7 +24,7 @@ features:
   - title: <font color="white">文章分类</font>
     icon: 📚
     details: 笔记文章
-    link: /Tags
+    link: /docs/Tags
   - title: 3
     icon: 💯
     details: 3
