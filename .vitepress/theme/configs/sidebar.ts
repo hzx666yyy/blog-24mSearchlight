@@ -23,6 +23,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
                 ]},
             {text:'docker',items:[
                     {text:'docker',link:'/docs/Linux/docker/docker'},
+                    {text:'Docker可视化工具-portainer',link:'/docs/Linux/docker/Docker可视化工具-portainer'},
                 ]}
         ] },
     { text: '计算机基础',
