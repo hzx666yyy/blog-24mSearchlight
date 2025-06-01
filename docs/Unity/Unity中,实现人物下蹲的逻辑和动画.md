@@ -10,11 +10,11 @@
 
 我们需要在Animator窗口中右键创建子状态机(sub-state machine)
 
-![](D:\Reader\学习笔记\Unity学习笔记\assets\Snipaste_2025-06-02_01-54-07.png)
+![](\assets\Snipaste_2025-06-02_01-54-07.png)
 
 之后我们双击创建好的子状态机进入到编辑页面,然后可以将需要管理的动作拖拽到其中
 
-![](D:\Reader\学习笔记\Unity学习笔记\assets\Snipaste_2025-06-02_01-55-00.png)
+![](\assets\Snipaste_2025-06-02_01-55-00.png)
 
 ## 自定义进入退出的条件,实现动画的切换
 
@@ -27,15 +27,15 @@
 isCrouch = inpuDirection.y < -0.5f && physicsCheck.isGround;
 ```
 
-![](D:\Reader\学习笔记\Unity学习笔记\assets\Snipaste_2025-06-02_02-00-17.png)
+![](\assets\Snipaste_2025-06-02_02-00-17.png)
 
 进入下蹲状态的条件
 
-![](D:\Reader\学习笔记\Unity学习笔记\assets\Snipaste_2025-06-02_02-00-27.png)
+![](\assets\Snipaste_2025-06-02_02-00-27.png)
 
 下蹲结束的条件
 
-![](D:\Reader\学习笔记\Unity学习笔记\assets\Snipaste_2025-06-02_02-00-32.png)
+![](\assets\Snipaste_2025-06-02_02-00-32.png)
 
 ## 关于下蹲后碰撞器范围的改变
 
