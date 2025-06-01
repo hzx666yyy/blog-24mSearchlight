@@ -10,7 +10,12 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
     {text: 'Unity',
         collapsed: false,
         items:[
-            {text: 'Unity中世界坐标和本地坐标互相之间的转换',link: '/docs/Unity/Unity中世界坐标和本地坐标互相之间的转换'}
+            {text: 'Unity中世界坐标和本地坐标互相之间的转换',link: '/docs/Unity/Unity中世界坐标和本地坐标互相之间的转换'},
+            {text: '2D图的Sprite分隔',link: '/docs/Unity/2D图的Sprite分隔'},
+            {text: '2D角色动画',link: '/docs/Unity/2D角色动画'},
+            {text: 'Unity中,实现人物下蹲的逻辑和动画',link: '/docs/Unity/Unity中,实现人物下蹲的逻辑和动画'},
+            {text: '如何取消两个刚体物体之间的碰撞检测',link: '/docs/Unity/如何取消两个刚体物体之间的碰撞检测'},
+            {text: '检测角色是否在与其他物体重叠',link: '/docs/Unity/检测角色是否在与其他物体重叠'},
         ]
     },
     { text: 'Linux',

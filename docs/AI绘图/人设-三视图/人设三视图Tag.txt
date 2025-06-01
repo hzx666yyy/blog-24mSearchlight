@@ -1,0 +1,4 @@
+masterpiece, best quality, 1girl, simple background, (white background:1.5), multiple views,  
+(自己的人设提示词)
+
+<lora:charturnbetalora:0.2>
