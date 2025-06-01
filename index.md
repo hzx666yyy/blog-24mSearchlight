@@ -14,7 +14,7 @@ hero:
       link: /README
     - theme: alt
       text: GitHub
-      link: 
+      link: https://github.com/hzx666yyy
 
 features:
   - title: <font color="white">Markdown 扩展</font>
@@ -25,9 +25,9 @@ features:
     icon: 📚
     details: 笔记文章
     link: /docs/Tags
-  - title: 3
+  - title: todo
     icon: 💯
-    details: 3
+    details: Todo
   
 ---
 
