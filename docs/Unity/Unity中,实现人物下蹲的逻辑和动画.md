@@ -2,9 +2,10 @@
 
 首先我们要知道,人物下蹲基本都分为下蹲开始的动作和下蹲的状态,这种多阶段组存的复杂动作,如果不规整起来会比较乱.
 
+
 所以我们可以使用子状态机进行管理.
 
-[Unity -手册：子状态机 --- Unity - Manual: Sub-State Machines](https://docs.unity3d.com/6000.1/Documentation/Manual/NestedStateMachines.html)
+<Linkcard url="https://docs.unity3d.com/6000.1/Documentation/Manual/NestedStateMachines.html" title="Unity -手册：子状态机 --- Unity - Manual: Sub-State Machines" description="" logo="https://cdn.cookielaw.org/logos/0be70f5e-5e8c-4b5b-a70e-3c3899308c62/bd2f7f6c-aedd-4cb5-9a23-928ed573901d/8506c1ab-21ee-4752-8318-a825f65bde2f/unity-logo.png"/>
 
 ## 创建子状态机
 
