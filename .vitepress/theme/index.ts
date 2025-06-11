@@ -42,7 +42,7 @@ export default {
         useLive2d({
             enable: true,
             model: {
-                url: 'https://raw.githubusercontent.com/iCharlesZ/vscode-live2d-models/master/model-library/potion-Maker-Pio/index.json'
+                url: 'https://24msearchlight.oss-cn-beijing.aliyuncs.com/model-library/potion-Maker-Pio.json'
             },
             display: {
                 position: 'left',
