@@ -39,25 +39,25 @@ export default {
     setup() {
 
         //看板娘 //
-        useLive2d({
-            enable: true,
-            model: {
-                url: 'https://24msearchlight.oss-cn-beijing.aliyuncs.com/model-library/potion-Maker-Pio.json'
-            },
-            display: {
-                position: 'left',
-                width: '135px',
-                height: '200px',
-                xOffset: '35px',
-                yOffset: '5px'
-            },
-            mobile: {
-                show: true
-            },
-            react: {
-                opacity: 0.8
-            }
-        })
+        // useLive2d({
+        //     enable: true,
+        //     model: {
+        //         url: 'https://24msearchlight.oss-cn-beijing.aliyuncs.com/model-library/potion-Maker-Pio.json'
+        //     },
+        //     display: {
+        //         position: 'left',
+        //         width: '135px',
+        //         height: '200px',
+        //         xOffset: '35px',
+        //         yOffset: '5px'
+        //     },
+        //     mobile: {
+        //         show: true
+        //     },
+        //     react: {
+        //         opacity: 0.8
+        //     }
+        // })
 
         // Get frontmatter and route
         const { frontmatter } = useData();
